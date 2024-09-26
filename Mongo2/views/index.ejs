@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Whatsapp</title>
+  </head>
+  <body>
+    <div class="p-4 flex justify-between flex-col align-middle items-center">
+      <h3 class="m-2 text-xl pb-3 font-bold">All Chats</h3>
+      <div class="pb-3">
+        <form method="get" action="/chats/new">
+          <button class="border-2 py-2 px-7 hover:border-2 hover:border-sky-900 bg-blue-400 rounded-xl">New Chat</button>
+        </form>
+      </div>
+      <% for(chat of chats) { %>
+      <div class="m-2 w-1/5 border-2 p-2 rounded-2xl bg-sky-100">
+        <p>From : <%= chat.from %></p>
+        <div class="p-4 border-2 mx-4 my-2 rounded-3xl bg-sky-300 shadow-md">
+          <p>Msg : <%= chat.msg %></p>
+        </div>
+        <div class=" "> 
+          <p>Received by <%= chat.to %></p>
+          <form method="get" action="/chats/<%= chat._id %>/edit">
+            <button class="text-xs">Edit</button>
+          </form>
+          <form method="post" action="/chats/<%= chat._id %>?_method=DELETE">
+            <button class="text-xs">Delete</button>
+          </form>
+          <form method="get" action="/chats/<%= chat._id %>">
+            <button class="text-xs">Show</button>
+          </form>
+          <span class="text-xs flex flex-row-reverse"><%= chat.created_at.toString().split(" ")[4] %></span>
+          <span class="text-xs flex flex-row-reverse"><%= chat.created_at.toString().split(" ").slice(0, 4).join(" ") %></span>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>

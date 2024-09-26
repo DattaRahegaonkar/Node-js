@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    color: black;
+}
+
+/*--------------------------------------------------------- Header Section -----------------------------------------------------------*/
+
+.header {
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    padding: 0.6rem 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav h1 {
+    font-size: 3.1rem;
+}
+
+nav h1 span {
+    color: #0facac;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    margin: 0.6rem 1rem;
+    font-size: 1.15rem;
+    padding: 0.5rem 1.6rem;
+    border-radius: 3rem;
+    position: relative;
+}
+
+nav li:hover {
+    transition: all ease .6s;
+    background-color: #8d9292;
+}
+
+nav li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 550;
+}
+
+.head-text {
+    padding-top: 12rem;
+}
+
+.head-text h1 {
+    font-size: 3.7rem;
+    margin-top: 1.5rem;
+}
+
+.head-text h1 span {
+    color: #01BCAD;
+}
+
+/* -------------- ----------------------------------------------About Section -------------------------------------------------------- */
+
+.about {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#01BCAD;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100% );
+}
+
+.about-head {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.resume {
+    margin-top: 2rem;
+}
+
+.view-resume {
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    transition: .2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.view-resume:hover {
+    color: #01BCAD;
+}
+
+.view-resume::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: transform 0.2s;
+    transform-origin: 0 0;
+}
+
+.view-resume::before {
+    transform: scaleX(0);
+}
+
+.view-resume:hover::before {
+    transform: scaleX(1);
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-image {
+    width: 30%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-text {
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.about-text p {
+    font-size: 1rem;
+}
+
+/* ------------------------------------------------------Project Section------------------------------------------------------------- */
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2.5rem;
+}
+
+.project-heading {
+    margin-bottom: 1.5rem;
+}
+
+.project-heading h1 {
+    font-size: 2.5rem;
+}
+
+.col-1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.3rem;
+}
+
+.col-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .g {
+    margin: 1.3rem 5.2rem 1.3rem 1.3rem;
+    padding: 30px 2.5rem;
+    border-radius: 0.6rem;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.container .g:hover {
+    background: #01BCAD;
+    color: #fff;
+    transform: translate(10px, -5px);
+}
+
+.container .g:hover .source-code {
+    border-color: #fff;
+}
+
+.container .g {
+    box-shadow: 0 0 1.3rem;
+}
+
+.container h3 {
+    font-size: 1.9rem;
+    margin-bottom: 0.7rem;
+}
+
+.container p {
+    line-height: 1.4rem;
+    font-size: 1.09rem;
+    margin-bottom: 1.3rem;
+}
+
+.source-code {
+    width: 35%;
+    padding: 0.6rem 1.3rem;
+    text-align: center;
+    border: 1px solid black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.source-code {
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: .2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.source-code:hover {
+    color: #01BCAD;
+}
+
+.source-code::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: transform 0.2s;
+    transform-origin: 0 0;
+}
+
+.source-code::before {
+    transform: scaleX(0);
+}
+
+.source-code:hover::before {
+    transform: scaleX(1);
+}
+
+/*-------------------------------------------------------------------- Contact Section--------------------------------------------------------------------------- */
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 6rem;
+    color: #fff;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100% );
+    background: linear-gradient(#01BCAD 60%, #333333 1%);
+}
+
+.contact .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    margin-top: 10.4rem;
+    width: 75%;
+}
+
+.contact-head {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.contact-head h1 {
+    font-size: 2.5rem;
+}
+
+.number-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 7.9rem;
+}
+
+.num-em {
+    display: flex;
+    justify-content: center;
+}
+
+.num-em a {
+    text-decoration: none;
+    columns: #fff;
+}
+
+.num-em p {
+    margin-left: 1rem;
+    padding-top: 0.24rem;
+    font-size: 1.3rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.num-em i {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.email {
+    padding-left: 1.8rem;
+}
+
+.social-logo {
+    margin-top: 9.6rem;
+    text-align: center;
+}
+
+.uparrow {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 2.2rem;
+    margin: 4.3rem 0 3.4rem;
+}
+
+.logo i {
+    margin: 0 1.8rem;
+    cursor: pointer;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.copyright {
+    display: flex;
+    text-align: center;
+    padding: 0.6rem 3rem 0 3rem; 
+    opacity: .4;
+}
+
+.copyright p {
+    font-size: 0.85rem;
+}
+
+.copyright i {
+    margin-right: 0.6rem;
+    padding-top: 0.24rem;
+    font-size: 0.75rem;
+}
+
+.copyright span {
+    cursor: pointer;
+}
+
+.copyright span:hover {
+    transition: all ease 0.3s;
+    color: #01BCAD;
+}
+
+/*--------------------------------------------------- Media query -------------------------------------------- */
+

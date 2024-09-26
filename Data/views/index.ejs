@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Enter your Details</h1>
+    <form method="post" action="/data">
+        <input placeholder="Enter Your Username" name="username" required/><br><br>
+        <input type="email" name="email" placeholder="Enter Your Email" required/><br><br>
+        <input type="password" name="password" placeholder="Enter password" required/><br><br>
+        <button>submit</button>
+    </form>
+    <form action="/data">
+        <button>Back</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,185 @@
+
+.container .fa-solid {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    /*------------------------------- media query for header section ---------------------------*/
+
+    .head-text h1 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .container {
+        padding: 0.8rem 5%;
+    }
+    nav h1 {
+        font-size: 1.8rem;
+    }
+    .head-text {
+        padding-top: 12rem;
+    }
+    .head-text h1 {
+        font-size: 2rem;
+    }
+    nav ul {
+        background: #01BCAD;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 3rem;
+        transition: right 0.5s;
+    }
+    ul .closemenu {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+    .container .fa-solid {
+        display: block;
+        font-size: 1.6rem;
+    }
+
+    /*------------------------------- media query for about section ---------------------------*/
+
+    .about {
+        padding: 1.5rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
+    }
+    .about .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .about-head {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .about-image {
+        width: 240px;
+    }
+    .about-text {
+        width: 100%;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    /*------------------------------- media query for project section ---------------------------*/
+
+    .project-heading h1 {
+        font-size: 2rem;
+    }
+    .project-heading {
+        margin-bottom: .8rem;
+    }
+
+    .container .g {
+        margin: 1rem 2rem 1rem 1rem;
+        padding: 1rem;
+        border-radius: 0.6rem;
+        transition: background 0.5s, transform 0.5s;
+    }
+
+    .container h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .container p {
+        font-size: 1rem;
+        margin-bottom: 0.7rem;
+        line-height: 1.2rem;
+
+    }
+
+    .col-1 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1.3rem;
+    }
+    
+    .col-2 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+
+    /*------------------------------- media query for header section ---------------------------*/
+
+
+    .container {
+        padding: 0.8rem 5%;
+    }
+    nav h1 {
+        font-size: 2rem;
+    }
+    .head-text h1 {
+        font-size: 2.2rem;
+    }
+    nav li {
+        display: inline-block;
+        list-style: none;
+        margin: 0.4rem .5rem;
+        font-size: .9rem;
+        padding: 0.3rem .6rem;
+    }
+
+    /*------------------------------- media query for about section ---------------------------*/
+
+    .about {
+        padding: 1.5rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
+    }
+    .about-image {
+        width: 240px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1235px) {
+
+    /*------------------------------- media query for header section ---------------------------*/
+
+
+    .container {
+        padding: 0 5%;
+    }
+    nav h1 {
+        font-size: 3rem;
+    }
+    .head-text h1 {
+        font-size: 2.9rem;
+    }
+    nav li {
+        display: inline-block;
+        list-style: none;
+        margin: 0.4rem .5rem;
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    /*------------------------------- media query for about section ---------------------------*/
+
+    .about {
+        padding: 1.5rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100% );
+
+    }
+}
+
+
+@media (min-width: 1100px) {
+    .about {
+        width: 100%;
+        height: 100vh;
+    }
+
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>data</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      form button {
+        margin: 10px;
+        padding: 5px 20px;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Our Users</h1>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <% for(user of users){ %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <td>
+          <form method="get" action="/data/<%= user.id %>/edit">
+            <button>Edit</button>
+          </form>
+        </td>
+        <td>
+          <form method="post" action="/data/<%= user.id %>/delete?_method=DELETE">
+            <button>Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% } %>
+    </table>
+    <form method="get" action="/data/info">
+      <button>Join us</button>
+    </form>
+  </body>
+</html>

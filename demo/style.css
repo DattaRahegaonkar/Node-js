@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    color: black;
+}
+
+/*--------------------------------------------------------- Header Section -----------------------------------------------------------*/
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav h1 {
+    font-size: 50px;
+}
+
+nav h1 span {
+    color: #0facac;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+    font-size: 18px;
+    padding: 8px 25px;
+    border-radius: 50px;
+    position: relative;
+    transition: .5s;
+}
+
+nav li:hover {
+    background-color: #8d9292;
+}
+
+nav li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 550;
+}
+
+.head-text {
+    padding-top: 15%;
+    font-size: 25px;
+}
+
+.head-text h1 {
+    font-size: 60px;
+    margin-top: 25px;
+}
+
+.head-text h1 span {
+    color: #01BCAD;
+}
+
+/* -------------- ----------------------------------------------About Section -------------------------------------------------------- */
+
+.about {
+    padding: 100px 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#01BCAD;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100% );
+}
+
+.resume {
+    margin-top: 20px;
+}
+
+.view-resume {
+    padding: 10px 20px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    transition: .2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.view-resume:hover {
+    color: #01BCAD;
+}
+
+.view-resume::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: transform 0.2s;
+    transform-origin: 0 0;
+}
+
+.view-resume::before {
+    transform: scaleX(0);
+}
+
+.view-resume:hover::before {
+    transform: scaleX(1);
+}
+
+.about .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex-basis: 28%;
+      
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-text {
+    line-height: 1.5rem;
+    flex-basis: 50%;
+}
+
+.about-text p {
+    font-size: 17.3px;
+}
+
+.about-text h1 {
+    font-size: 40px;
+}
+
+/* ------------------------------------------------------Project Section------------------------------------------------------------- */
+
+.project {
+    /* width: 100%;
+    height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 40px;
+}
+
+.project-heading {
+    margin-bottom: 25px;
+}
+
+.project-heading h1 {
+    font-size: 40px;
+}
+
+.col-1 {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.col-2 {
+    display: flex;
+}
+
+.container .g {
+    margin: 20px 85px 20px 20px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.container .g:hover {
+    background: #01BCAD;
+    color: #fff;
+    transform: translate(10px, -5px);
+}
+
+.container .g:hover .source-code {
+    border-color: #fff;
+}
+
+.container .g {
+    box-shadow: 0 0 20px;
+}
+
+.container h3 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.container p {
+    line-height: 1.4rem;
+    font-size: 17.5px;
+    margin-bottom: 20px;
+}
+
+.source-code {
+    width: 35%;
+    padding: 7px;
+    text-align: center;
+    border: 1px solid black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.source-code {
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: .2s;
+    cursor: pointer;
+    position: relative;
+}
+
+.source-code:hover {
+    color: #01BCAD;
+}
+
+.source-code::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: transform 0.2s;
+    transform-origin: 0 0;
+}
+
+.source-code::before {
+    transform: scaleX(0);
+}
+
+.source-code:hover::before {
+    transform: scaleX(1);
+}
+
+/*-------------------------------------------------------------------- Contact Section--------------------------------------------------------------------------- */
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 100px;
+    color: #fff;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100% );
+    background: linear-gradient(#01BCAD 60%, #333333 1%);
+}
+
+.contact .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    margin-top: 170px;
+    width: 75%;
+}
+
+.contact-head {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-head h1 {
+    font-size: 40px;
+}
+
+.number-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 130px;
+}
+
+.num-em {
+    display: flex;
+    justify-content: center;
+}
+
+.num-em a {
+    text-decoration: none;
+    columns: #fff;
+}
+
+.num-em p {
+    margin-left: 15px;
+    padding-top: 4px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.num-em i {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.email {
+    padding-left: 30px;
+}
+
+.social-logo {
+    margin-top: 160px;
+    text-align: center;
+}
+
+.uparrow {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 30px;
+    margin: 70px 0 55px;
+}
+
+.logo i {
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.copyright {
+    display: flex;
+    text-align: center;
+    padding: 10px 50px 0 50px; 
+    opacity: .4;
+}
+
+.copyright p {
+    font-size: 14px;
+}
+
+.copyright i {
+    margin-right: 10px;
+    padding-top: 4px;
+    font-size: 12px;
+}
+
+.copyright span {
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.copyright span:hover {
+    color: #01BCAD;
+}
